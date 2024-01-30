@@ -14,7 +14,7 @@ Compare the bubble sort algorithm with quicksort and mergesort.Discuss the advan
 */
 
 
-1. Easy: Understanding Bubble Sort
+/*1. Easy: Understanding Bubble Sort
 Manually sort the array `[5, 2, 8, 1, 3] ` using the bubble sort technique.write down each step of the process.
 
 Original array: [9, 4, 7, 1, 6]
