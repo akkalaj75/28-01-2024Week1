@@ -1,3 +1,4 @@
+/*
 Questions:
 
 1. Easy: Understanding Bubble Sort
@@ -81,7 +82,7 @@ Step 1 :
     
     3) Intermediate : Code Implementation
     Implement the bubble sort algorithm in C++.Provide them with the following unsorted array : `[3, 6, 1, 8, 2] `. Code from scratch and test it to ensure it works correctly.
-
+*\
     #include <iostream>
     #include <vector>
         void bubbleSort(std::vector<int>&arr) {
@@ -118,8 +119,10 @@ Step 1 :
         return 0;
     }
 ====================================================================================================================================================================================
-4) Advanced: Optimization Challenge
-Challenge yourself to optimize the bubble sort algorithm.Provided with the partially sorted array `[1, 2, 3, 4, 5, 10, 9, 8, 7, 6] `. Optimize the algorithm to reduce the number of comparisons or swaps, making the sorting process more efficient.
+
+/*4) Advanced: Optimization Challenge
+Challenge yourself to optimize the bubble sort algorithm.
+Provided with the partially sorted array `[1, 2, 3, 4, 5, 10, 9, 8, 7, 6] `. Optimize the algorithm to reduce the number of comparisons or swaps, making the sorting process more efficient.*\
 
 #include <iostream>
 #include <vector>
@@ -166,40 +169,63 @@ int main() {
 
 =======================================================================================================================
 
-
+/*
 5) Simple Comparison of Bubblesort :
-
-Bubble Sort :
+Bubble Sort:
 
 Advantages:
 Simple to understand and implement.
-No extra memory is needed(in - place).
-Disadvantages :
-    Inefficient for large datasets.
-    Not stable.
-    Quicksort :
+No extra memory is needed (in-place).
+Disadvantages:
 
-    Advantages :
-    Efficient average-case performance(O(n log n)).
-    In-place sorting.
-    Good for large datasets.
-    Disadvantages:
-        Inefficient in the worst case.
-            Not stable.
-        Mergesort:
+Inefficient for large datasets.
+Not stable (meaning it may change the relative order of equal elements).
 
-        Advantages:
-            Consistently good performance(O(n log n)).
-                Stable sorting.
-                Suitable for large datasets.
-                Disadvantages :
-                Requires extra memory.
-                When to Use :
+When to Use Bubble Sort:
+Use Bubble Sort for its simplicity and ease of implementation.
+Best suited for small datasets or educational purposes where efficiency is not a primary concern.
+It can be a good choice when memory usage needs to be minimized since it's an in-place sorting algorithm.
 
-            Use Bubble Sort for simplicity and small datasets.
-                Use Quicksort for average-case efficiency, especially in - memory-constrained scenarios.
-                Use Mergesort for consistent performance, and stability, and when additional memory usage is acceptable.
-                In general, for most real-world scenarios with medium to large datasets, Quicksort or Mergesort are often preferred over Bubble Sort due to their better average-case performance. 
-                The choice between Quicksort and Mergesort depends on specific requirements like stability and memory usage.
-                
+Quicksort:
+Advantages:
+Efficient average-case performance O(n log n).
+In-place sorting, which means it doesn't need additional memory (beyond the stack space for recursion).
+Good for large datasets due to its efficient partitioning.
 
+Disadvantages:
+Inefficient in the worst-case scenario when the pivot selection is poor (e.g., already sorted data).
+Not stable.
+
+When to Use Quicksort:
+Use Quicksort for average-case efficiency, especially when working with large datasets.
+It's particularly useful in scenarios where memory is a concern, as it doesn't require additional memory for most implementations.
+Quicksort can be faster than Mergesort due to its better cache performance and lower overhead.
+However, care should be taken with the pivot selection to avoid worst-case scenarios.
+
+Mergesort:
+Advantages:
+Consistently good performance O(n log n) in all scenarios.
+Stable sorting, meaning it preserves the relative order of equal elements.
+Suitable for large datasets due to its efficient divide-and-conquer approach.
+
+Disadvantages:
+Requires extra memory for the temporary arrays during the merging phase.
+
+When to Use Mergesort:
+Use Mergesort when you need a sorting algorithm with consistent performance across all scenarios.
+It's an excellent choice for scenarios where stability in sorting is crucial.
+Mergesort is well-suited for situations where you can afford the additional memory usage for the temporary arrays.
+It's often used in external sorting algorithms where data is too large to fit into main memory.
+
+Choosing Between the Algorithms:
+For Small Datasets or Simplicity:
+Bubble Sort remains a straightforward choice.
+
+For Average-Case Efficiency:
+Quicksort is a good pick, especially when memory is a concern and the dataset is large.
+
+For Consistent Performance and Stability:
+Mergesort shines, particularly when you need a stable sorting algorithm that consistently performs well, regardless of the input data.
+
+In general, for most real-world scenarios with medium to large datasets, Quicksort or Mergesort are often preferred over Bubble Sort due to their better average-case performance.
+ The choice between Quicksort and Mergesort depends on specific requirements such as stability, memory usage, and whether worst-case performance is a concern.*\
